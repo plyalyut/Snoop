@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Editorial by HTML5 UP</title>
+		<title>Snoop: Kennels</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -25,7 +25,7 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
+									<a href="index.html" class="logo"><strong>Snoop: Kennels</strong></a>
 									<ul class="icons">
 										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
@@ -41,16 +41,49 @@
 										<h1>Kennel Owner</h1>
 									</header>
 									<span class="image main"><img src="images/pup.jpg" alt="" /></span>
-									<h2> List your Kennel: </h2>
-									<form action="/action_page.php">
-										Name: <br>
-										<input type="text" name="name" value=""><br>
-										Address: <br>
-										<input type="text" name="address" value=""><br>
-										Dog Breed: <br>
-										<input type="text" name="dogs" value=""><br><br>
-										<input type="submit" value="Submit">
-									</form>
+
+									<!-- Form -->
+										<h3>List your Kennel:</h3>
+
+										<form method="post" action="#">
+											<div class="row uniform">
+												<div class="6u 12u$(xsmall)">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												</div>
+												<div class="6u$ 12u$(xsmall)">
+													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												</div>
+												<!-- Break -->
+												<div class="12u$">
+													<div class="select-wrapper">
+														<select name="demo-category" id="demo-category">
+															<option value="">Number of Dogs</option>
+															<option value="1">1-10</option>
+															<option value="1">11-20</option>
+															<option value="1">21-30</option>
+															<option value="1">30+</option>
+														</select>
+													</div>
+												</div>
+												<!-- Break -->
+												<div class="6u 12u$(small)">
+													<input type="checkbox" id="demo-copy" name="demo-copy">
+													<label for="demo-copy">Email me a copy</label>
+												</div>
+												<!-- Break -->
+												<div class="12u$">
+													<textarea name="demo-message" id="demo-message" placeholder="List the Dog Breeds" rows="6"></textarea>
+												</div>
+												<!-- Break -->
+												<div class="12u$">
+													<ul class="actions">
+														<li><input type="submit" value="Send Message" class="special" /></li>
+														<li><input type="reset" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+
 								</section>
 
 						</div>
@@ -61,11 +94,11 @@
 						<div class="inner">
 
 							<!-- Search -->
-								<section id="search" class="alt">
+								<!--<section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Search" />
 									</form>
-								</section>
+								</section>-->
 
 							<!-- Menu -->
 								<nav id="menu">
@@ -73,7 +106,7 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Homepage</a></li>
+										<li><a href="index.html">Home</a></li>
 										<li><a href="generic.html">Generic</a></li>
 										<li><a href="elements.html">Elements</a></li>
 										<li>
@@ -105,7 +138,7 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Ante interdum</h2>
+										<h2>Just Listed!</h2>
 									</header>
 									<div class="mini-posts">
 										<article>
