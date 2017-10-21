@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+Editorial by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>Editorial by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/adopt.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body>
+
+
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>Snoop</strong> by Best Friends</a>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+					</ul>
+				</header>
+
+				<section>
+
+					<h1>Which Breed?</h1>
+
+					<form method="post" action="quiz.html">
+						<center>
+							<br>
+							<div class="12u$">
+								<div class="select-wrapper">
+									<select name="meal" id="meal" onChange="changecat(this.value);">
+										<option value="" disabled selected>Select</option>
+										<option value="A">Herding</option>
+										<option value="B">Hound</option>
+										<option value="C">Non-Sporting</option>
+										<option value="D">Sporting</option>
+										<option value="E">Terrier</option>
+										<option value="F">Working</option>
+										<option value="G">Miscellaneous</option>
+									</select>
+									<br>
+									<br>
+									<select name="category" id="category">
+										<option value="" disabled selected>Select</option>
+									</select>
+								</div>
+							</div>
+							<br>
+						</center>
+						<!-- Break -->
+						<script>
+						var mealsByCategory = {
+							A: ["Soup", "Juice", "Tea", "Others"],
+							B: ["Soup", "Juice", "Water", "Others"],
+							C: ["Soup", "Juice", "Coffee", "Tea", "Others"],
+							D: ["Can", "Juice", "Coffee", "Tea", "Others"],
+							E: ["Ribs", "Juice", "Coffee", "Tea", "Others"],
+							F: ["tie", "Juice", "Coffee", "Tea", "Others"],
+							G: ["win", "Juice", "Coffee", "Tea", "Others"]
+						}
+
+						function changecat(value) {
+							if (value.length == 0) document.getElementById("category").innerHTML = "<option></option>";
+							else {
+								var catOptions = "";
+								for (categoryId in mealsByCategory[value]) {
+									catOptions += "<option>" + mealsByCategory[value][categoryId] + "</option>";
+								}
+								document.getElementById("category").innerHTML = catOptions;
+							}
+						}
+						</script>
+					</center>
+				</div>
+			</form>
+
+			<h1 class="or">OR</h1>
+
+			<center>
+				<input type="submit" value="Take Quiz" class="reg" />
+			</center>
+		</section>
+
+	</body>
+	</html>
