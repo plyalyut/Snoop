@@ -2505,6 +2505,9 @@
 		opacity: 1.0;
 	}
 
+.qr{
+  padding-right: 1.5em;
+}
 /* Box */
 
 	.box {
@@ -2512,6 +2515,7 @@
 		border: solid 1px rgba(210, 215, 217, 0.75);
 		margin-bottom: 2em;
 		padding: 1.5em;
+    align-items: center;
 	}
 
 		.box > :last-child,
