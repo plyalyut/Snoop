@@ -74,8 +74,8 @@ $connectionOptions = array(
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 
 //fetch all the form data
-$name = $_GET["demo-name"];
-$email = $_GET["demo-email"];
+$name = $_GET['demo-name'];
+$email = $_GET['demo-email'];
 
 echo($name);
 echo($email);

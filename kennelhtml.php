@@ -45,7 +45,7 @@
 									<!-- Form -->
 										<h3>List your Kennel:</h3>
 
-										<form method="post" action="kennel.php">
+										<form method="get" action="kennel.php">
 											<div class="row uniform">
 												<div class="6u 12u$(xsmall)">
 													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
