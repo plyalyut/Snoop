@@ -83,7 +83,7 @@ echo($email);
 $data= "INSERT INTO shelter (ShelName, Email)
 VALUES ($name, $email)";
 
-$postResults= sqlsrv_query($conn, $data);
+$postResults= sqlsrv_query($this->$conn, $data);
 echo ("Reading data from table" . PHP_EOL);
 if ($postResults === FALSE)
     die( print_r( sqlsrv_errors(), true));
