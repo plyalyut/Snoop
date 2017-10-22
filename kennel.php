@@ -78,8 +78,8 @@ $name = $_GET["demo-name"];
 $email = $_GET["demo-email"];
 
 //put data into server
-$data= "INSERT INTO shelter (ShelName, Email)
-VALUES ($name, $email)";
+$data= "INSERT INTO 'shelter' ('ShelName', 'Email')
+VALUES ('$name', '$email')";
 
 $postResults= sqlsrv_query($conn, $data);
 echo ("Reading data from table" . PHP_EOL);
