@@ -77,15 +77,15 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 $name = htmlspecialchars($_GET['demo-name']);
 $email = htmlspecialchars($_GET['demo-email']);
 
-echo($name);
-echo($email);
+#echo($name);
+#echo($email);
 
 //put data into server
 $data= "INSERT INTO shelter (ShelName, Email)
 VALUES ('$name', '$email')";
 
 $postResults= sqlsrv_query($conn, $data);
-echo ("Reading data from table" . PHP_EOL);
+#echo ("Reading data from table" . PHP_EOL);
 if ($postResults === FALSE)
     die( print_r( sqlsrv_errors(), true));
 
