@@ -64,23 +64,13 @@
 </html>
 
 <?php
-$host = 'snoopserv.mysql.database.azure.com';
-$username = 'snoop@snoopserv';
-$password = 'hackharvard20!7';
-$db_name = 'snoop';
-#$serverName = "snoop.database.windows.net";
-#$connectionOptions = array(
-#		"Database" => "Snoop",
-#		"Uid" => "snoop",
-#		"PWD" => "hackharvard20!7"
-#);
+$connectionOptions = array(
+		"Database" => "Snoop",
+		"Uid" => "snoop",
+		"PWD" => "hackharvard20!7"
+);
 //Establishes the connection
-#$conn = sqlsrv_connect($serverName, $connectionOptions);
-$conn = mysqli_init();
-mysqli_real_connect($conn, $host, $username, $db_name, 3306);
-if (mysqli_connect_errno($conn)) {
-die('Failed to connect to MySQL: '.mysqli_connect_error());
-}
+$conn = sqlsrv_connect($serverName, $connectionOptions);
 
 //fetch all the form data
 $name = htmlspecialchars($_GET['demo-name']);
@@ -89,21 +79,14 @@ $email = htmlspecialchars($_GET['demo-email']);
 echo($name);
 echo($email);
 
-if ($stmt = mysqli_prepare($conn, "INSERT INTO shelter (ShelName, Email) VALUES (?, ?)")) {
-mysqli_stmt_bind_param($stmt, 'ssd', $name, $email);
-mysqli_stmt_execute($stmt);
-printf("Insert: Affected %d rows\n", mysqli_stmt_affected_rows($stmt));
-mysqli_stmt_close($stmt);
-}
+//put data into server
+$data= "INSERT INTO shelter (ShelName, Email)
+VALUES ($name, $email)";
 
-#//put data into server
-#$data= "INSERT INTO shelter (ShelName, Email)
-#VALUES ($name, $email)";
+$postResults= sqlsrv_query($conn, $data);
+echo ("Reading data from table" . PHP_EOL);
+if ($postResults === FALSE)
+    die( print_r( sqlsrv_errors(), true));
 
-#$postResults= sqlsrv_query($conn, $data);
-#echo ("Reading data from table" . PHP_EOL);
-#if ($postResults === FALSE)
-#    die( print_r( sqlsrv_errors(), true));
-mysqli_close($conn);
-#sqlsrv_free_stmt($postResults);
+sqlsrv_free_stmt($postResults);
 ?>
