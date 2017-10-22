@@ -89,7 +89,7 @@ $email = htmlspecialchars($_GET['demo-email']);
 echo($name);
 echo($email);
 
-if ($stmt = mysqli_prepare($conn, "INSERT INTO shelter (ShelName, Email) VALUES (?, ?)")) {
+if ($stmt = mysqli_prepare($conn, "INSERT INTO 'snoop'.'shelter' (ShelName, Email) VALUES (?, ?)")) {
 mysqli_stmt_bind_param($stmt, 'ssd', $name, $email);
 mysqli_stmt_execute($stmt);
 printf("Insert: Affected %d rows\n", mysqli_stmt_affected_rows($stmt));
