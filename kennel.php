@@ -81,7 +81,7 @@ $email = $_GET["demo-email"];
 $data= "INSERT INTO shelter (ShelName, Email)
 VALUES ($name, $emaik)";
 
-$postResults= sqlsrv_query($conn, $tsql);
+$postResults= sqlsrv_query($conn, $data);
 echo ("Reading data from table" . PHP_EOL);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
