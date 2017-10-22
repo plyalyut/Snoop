@@ -81,13 +81,13 @@ echo($name);
 echo($email);
 
 //put data into server
-$data= "INSERT INTO shelter (ShelName, Email)
-VALUES ($name, $email)";
+$data= "INSERT INTO shelter (ShelName, Email, Phone)
+VALUES ($name, $email, NULL)";
 
 $postResults= sqlsrv_query($conn, $data);
 echo ("Reading data from table" . PHP_EOL);
-if ($getResults == FALSE)
-    echo (sqlsrv_errors());
+if ($postResults === FALSE)
+    die( print_r( sqlsrv_errors(), true));
 
-sqlsrv_free_stmt($getResults);
+sqlsrv_free_stmt($postResults);
 ?>
