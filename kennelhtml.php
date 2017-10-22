@@ -48,10 +48,17 @@
 										<form method="get" action="kennel.php">
 											<div class="row uniform">
 												<div class="6u 12u$(xsmall)">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Kennel Name" />
 												</div>
 												<div class="6u$ 12u$(xsmall)">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email Address" />
+												</div>
+												<!-- Break -->
+												<div class="6u 12u$(xsmall)">
+													<input type="text" name="phone" id="phone" value="" placeholder="Phone Number" />
+												</div>
+												<div class="6u$ 12u$(xsmall)">
+													<input type="text" name="address" id="address" value="" placeholder="Address" />
 												</div>
 												<!-- Break -->
 												<div class="12u$">
