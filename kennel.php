@@ -77,6 +77,9 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 $name = $_GET["demo-name"];
 $email = $_GET["demo-email"];
 
+echo($name);
+echo($email);
+
 //put data into server
 $data= "INSERT INTO 'shelter' ('ShelName', 'Email')
 VALUES ('$name', '$email')";
